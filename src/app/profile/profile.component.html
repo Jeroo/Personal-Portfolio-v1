@@ -1,0 +1,34 @@
+<section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about" *ngIf="applicants.length > 0 else noData">
+      <div class="w-100">
+        <h1 class="mb-0">{{ applicants[0].name }}
+          <span class="text-primary">{{ applicants[0].last_name }}</span>
+        </h1>
+        <div class="subheading mb-5">{{ applicants[0].address }} · {{ applicants[0].phone }} ·
+          <a href="mailto:{{ applicants[0].email }}">{{ applicants[0].email }}</a>
+        </div>
+        <p class="lead mb-5">{{ applicants[0].profile_description }}</p>
+        <div class="social-icons">
+          <a href="#">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <ng-template #noData>
+      <div class="mat-elevation-z8 noData">
+        <mat-spinner *ngIf="isLoading" class="spinner"></mat-spinner>
+        <h2 *ngIf="isLoading">Cargando datos</h2>
+
+        <h2 *ngIf="!isLoading">No hay datos disponibles</h2>
+      </div>
+    </ng-template>
