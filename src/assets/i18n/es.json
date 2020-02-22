@@ -1,3 +1,8 @@
 {
-      "HELLO": "Hola"
+      "About": "Sobre mi",
+      "Experience": "Experiencia",
+      "Education": "Educación",
+      "Skills": "Habilidades",
+      "Interests": "Intereses",
+      "Awards": "Premios"
 }

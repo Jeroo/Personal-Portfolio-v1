@@ -6,19 +6,11 @@
         <div class="subheading mb-5">{{ applicants[0].address }} · {{ applicants[0].phone }} ·
           <a href="mailto:{{ applicants[0].email }}">{{ applicants[0].email }}</a>
         </div>
-        <p class="lead mb-5">{{ applicants[0].profile_description }}</p>
+        <p class="lead mb-5">{{ applicants[0].profile_description }}</p>       
+
         <div class="social-icons">
-          <a href="#">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#">
-            <i class="fab fa-facebook-f"></i>
+          <a *ngFor="let socialnet of socialNetwork"  href="{{ socialnet.link }}" target="_blank">
+            <i class="{{ socialnet.logo }}"></i>
           </a>
         </div>
       </div>

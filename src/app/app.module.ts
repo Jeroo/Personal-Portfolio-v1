@@ -28,7 +28,8 @@ import { ApplicantsService } from './_services/applicants.service';
 //Angular Material Modules
 import { 
   MatCardModule,
-  MatProgressSpinnerModule 
+  MatProgressSpinnerModule,
+  MatButtonModule 
 } from '@angular/material';
 
 
@@ -56,6 +57,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HttpClientModule,
     MatCardModule,
     MatProgressSpinnerModule,
+    MatButtonModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

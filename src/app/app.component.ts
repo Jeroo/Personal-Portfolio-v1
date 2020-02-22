@@ -10,8 +10,15 @@ export class AppComponent {
 
   constructor(public translate: TranslateService) {
     this.translate.addLangs(['es', 'en']);
-    this.translate.setDefaultLang('en');
-    this.translate.use('es');
+    this.translate.setDefaultLang('es');
+    //this.translate.use('en');
+  }
+
+  switchLanguage(languaje: string) {
+
+    console.log(languaje);
+    
+    this.translate.use(languaje);
   }
   
 }
