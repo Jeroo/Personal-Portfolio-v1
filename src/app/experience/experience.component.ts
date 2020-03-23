@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ExperienceComponent implements OnInit {
 
-  experiences: Experience[]= [];
+  experiences: Experience[] = [];
   isLoading: boolean = false;
 
   constructor(private http: HttpClient) { }
