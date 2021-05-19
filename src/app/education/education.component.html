@@ -1,11 +1,11 @@
 <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
       <div class="w-100" *ngIf="educations.length > 0 else noData">
-        <h2 class="mb-5"> {{ "Education YES" | translate }}</h2>
+        <h2 class="mb-5"> {{ "Education" | translate }}</h2>
 
         <div *ngFor="let education of educations" class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
           <div class="resume-content">
             <h3 class="mb-0">{{ education.institutionname }}</h3>
-            <div class="subheading mb-3">{{ education.program }}</div>
+            <div class="subheading mb-3">Programas: {{ education.program }}</div>
             <div>{{ education.decription }}</div>
             <p>GPA: {{ education.gpa }}</p>
           </div>
